@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
         with:
-          node_version: ${{ matrix.node_version }}
+          node-version: ${{ matrix.node_version }}
       - name: Printing node version
         run: node -v
