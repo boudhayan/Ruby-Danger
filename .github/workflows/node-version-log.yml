@@ -1,0 +1,8 @@
+name: Log Node Version
+on: push
+jobs:
+ log-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing node version
+        run: node -v
