@@ -2,7 +2,13 @@ name: Log Node Version
 on: push
 jobs:
  log-node-version:
+    strategy:
+      matrix:
+        node_version: [6, 7, 8, 10]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v3
+        with:
+          node_version: ${{ matrix.node_version }}
       - name: Printing node version
         run: node -v
